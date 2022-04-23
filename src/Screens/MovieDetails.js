@@ -19,7 +19,7 @@ const MovieDetails = () => {
   }, [])
 
   if (episode.characters) {
-    // console.log('episode', episode)
+    console.log('episode', episode)
     return (
       <>
         <div>MovieDetails</div>
@@ -27,6 +27,7 @@ const MovieDetails = () => {
         <p>{episode.opening_crawl}</p>
         <h3>Characters</h3>
         {episode.characters.map((url, idx) => {
+          // console.log(url)
           const characterId = url.split('people')[1].split('/')[1]
           return (
             <div key={idx}>
